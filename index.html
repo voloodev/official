@@ -1,17 +1,50 @@
-<header>
-    <h1>Voloo</h1>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voloo | Modern Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">Voloo</div>
+        <button id="loginBtn" class="btn">Google Login</button>
+    </nav>
 
-<section id="projects">
-    <button onclick="openModal('projectModal')">My Projects</button>
-</section>
+    <section class="hero">
+        <h1>Welcome to Voloo</h1>
+        <p>Your partner in modern digital innovation.</p>
+    </section>
 
-<div id="contactModal" class="modal">
-    <div class="glass-effect" style="padding: 20px;">
-        <h3>Contact Voloo</h3>
-        <p>Name: Voloo</p>
-        <p>Email: Voloo@gmail.com</p>
-        <p>Whatsapp: 0762522078</p>
-        <button onclick="closeModal('contactModal')">Close</button>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="glass-card service-circle">Websites</div>
+            <div class="glass-card service-circle">Flyers</div>
+            <div class="glass-card service-circle">Graphics</div>
+            <div class="glass-card service-circle">Marketing</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <button class="btn" onclick="openModal('projectModal')">My Projects</button>
+    </section>
+
+    <section id="contact">
+        <button class="btn" onclick="openModal('contactModal')">Contact Voloo</button>
+    </section>
+
+    <div id="contactModal" class="modal">
+        <div class="glass-card modal-content">
+            <h3>Contact Details</h3>
+            <p>Name: Voloo</p>
+            <p>Email: Voloo@gmail.com</p>
+            <p>Whatsapp: 0762522078</p>
+            <button onclick="closeModal('contactModal')">Close</button>
+        </div>
     </div>
-</div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
