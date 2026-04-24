@@ -7,38 +7,38 @@
 body {
     background-color: var(--black);
     color: white;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
 }
 
-.glass-card {
-    background: rgba(255, 255, 255, 0.1);
+/* Frosted Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
 }
 
-.navbar {
+/* Header */
+header {
     position: fixed;
-    top: 0;
     width: 100%;
-    background: rgba(29, 43, 77, 0.8);
+    z-index: 1000;
+    padding: 20px;
+    background: rgba(29, 43, 77, 0.8); /* Navy with opacity */
     backdrop-filter: blur(10px);
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
 }
 
+/* Circle Services */
 .service-circle {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: var(--navy);
-    border: 2px solid var(--light-blue);
+    border: 3px solid var(--light-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    text-align: center;
+    transition: 0.3s;
 }
