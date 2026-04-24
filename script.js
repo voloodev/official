@@ -15,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// Login Logic
+// Admin access check logic
 document.getElementById('loginBtn').addEventListener('click', () => {
     signInWithPopup(auth, provider).then((result) => {
         const user = result.user;
@@ -23,11 +23,7 @@ document.getElementById('loginBtn').addEventListener('click', () => {
             alert("Admin Access Granted! You can now edit content.");
             // මෙතනදී ඔබට Edit buttons පෙන්වීමට කෝඩ් එක ලියන්න පුළුවන්
         } else {
-            alert("Welcome user!");
+            alert("Welcome, " + user.displayName + "! You are in user mode.");
         }
     });
 });
-
-// Modal Helpers
-window.openModal = (id) => document.getElementById(id).style.display = 'block';
-window.closeModal = (id) => document.getElementById(id).style.display = 'none';
