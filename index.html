@@ -5,45 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voloo | Modern Digital Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="glass-nav">
+
+    <nav class="navbar glass-effect">
         <div class="logo">Voloo</div>
-        <button id="loginBtn" class="btn">Google Login</button>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="loginBtn" class="login-btn btn-glass">Admin Access</button>
     </nav>
 
-    <section class="hero">
-        <h1>Welcome to Voloo</h1>
-        <p>Your partner in modern digital innovation.</p>
-    </section>
+    <header class="hero">
+        <h1 class="text-glow">Welcome to Voloo</h1>
+        <p>Turning Ideas into Scalable Digital Solutions</p>
+    </header>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="glass-card service-circle">Websites</div>
-            <div class="glass-card service-circle">Flyers</div>
-            <div class="glass-card service-circle">Graphics</div>
-            <div class="glass-card service-circle">Marketing</div>
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-wrapper">
+            <div class="service-block left">
+                <div class="service-circle">Websites</div>
+                <p>Custom, Responsive, and Scalable Web Applications.</p>
+            </div>
+            <div class="service-block right">
+                <div class="service-circle">Graphics</div>
+                <p>Posters, Flyers, and Graphics for modern brands.</p>
+            </div>
+            <div class="service-block left">
+                <div class="service-circle">Marketing</div>
+                <p>Effective Digital Marketing and SEO Strategies.</p>
+            </div>
         </div>
     </section>
 
-    <section id="projects">
-        <button class="btn" onclick="openModal('projectModal')">My Projects</button>
+    <section id="projects" class="section glass-effect">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-grid">
+            <div class="glass-card project-card rounded-rect">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <p>E-commerce Solution</p>
+                <a href="#" class="view-btn btn-glass">Click here to view</a>
+            </div>
+            </div>
     </section>
 
-    <section id="contact">
-        <button class="btn" onclick="openModal('contactModal')">Contact Voloo</button>
-    </section>
-
-    <div id="contactModal" class="modal">
-        <div class="glass-card modal-content">
-            <h3>Contact Details</h3>
-            <p>Name: Voloo</p>
-            <p>Email: Voloo@gmail.com</p>
-            <p>Whatsapp: 0762522078</p>
-            <button onclick="closeModal('contactModal')">Close</button>
+    <section id="why" class="section">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-wrapper alternates">
+            <div class="why-point glass-effect rounded-rect left">Low Cost</div>
+            <div class="why-point glass-effect rounded-rect right">No Hosting Cost</div>
+            <div class="why-point glass-effect rounded-rect left">Friendly Service</div>
         </div>
-    </div>
+    </section>
+
+    <section id="reviews" class="section glass-effect">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="rating-display text-glow">3.9 ★★★★★</div>
+        <div class="reviews-wrapper alternates">
+            <div class="review-block glass-effect rounded-rect left">"Supiri වැඩක්. නිවැරදිව කරලා දුන්නා."</div>
+            <div class="review-block glass-effect rounded-rect right">"Very responsive. Fast and good service."</div>
+        </div>
+    </section>
 
     <script type="module" src="script.js"></script>
 </body>
