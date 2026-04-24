@@ -7,47 +7,92 @@
 body {
     background-color: var(--black);
     color: white;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
-/* Glass Effect */
-.glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
+/* Base Glassmorphism Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-.glass-nav {
+/* Fixed Over Layer Navbar */
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(29, 43, 77, 0.7);
-    backdrop-filter: blur(10px);
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    align-items: center;
     z-index: 1000;
+    background: rgba(29, 43, 77, 0.6); /* Navy based glass */
 }
 
+/* Alternating Layout CSS */
+.alternates > * {
+    margin-bottom: 20px;
+}
+
+.left {
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.right {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+/* Service Circles with Hover */
 .service-circle {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    background: rgba(29, 43, 77, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--light-blue);
+    border: 3px solid var(--light-blue);
+    margin: 0 auto 10px auto;
+    transition: transform 0.5s, background-color 0.5s;
+    cursor: pointer;
 }
 
-.btn {
+.service-circle:hover {
+    transform: scale(1.15) rotate(5deg);
     background: var(--light-blue);
     color: var(--navy);
+}
+
+/* Rounded Rectangular Blocks */
+.rounded-rect {
+    border-radius: 15px; /* rounded box design */
+    padding: 20px;
+    width: 80%; /* Responsive width */
+    max-width: 600px;
+}
+
+/* Buttons with Glow */
+.btn-glass {
+    background: rgba(179, 217, 255, 0.2);
+    color: var(--light-blue);
+    border: 2px solid var(--light-blue);
     padding: 10px 20px;
     border-radius: 10px;
-    border: none;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.btn-glass:hover {
+    box-shadow: 0 0 15px var(--light-blue);
+}
+
+.text-glow {
+    text-shadow: 0 0 10px var(--light-blue);
 }
